@@ -7,6 +7,7 @@ pipeline {
     environment {
 		DOCKERHUB_CREDENTIALS=credentials('dockerhub')
         REGISTRY_NAME='maciej87pl/dor3cicd'
+	}
     stages {
         stage('Build and push') {
             steps {
