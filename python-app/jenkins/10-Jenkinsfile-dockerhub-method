@@ -5,9 +5,8 @@ pipeline {
         } 
     }
     environment {
-        REGISTRY_NAME = "kolodziejczyk0/python-app-info"
-		DOCKERHUB_CREDENTIALS='dockerhub-kolodziej'
-	}
+		DOCKERHUB_CREDENTIALS=credentials('dockerhub')
+        REGISTRY_NAME='maciej87pl/dor3cicd'
     stages {
         stage('Build and push') {
             steps {
